@@ -1,3 +1,6 @@
+use anyhow::Result;
+use wasmtime::*;
+
 #[actix_web::main]
 async fn main() -> io::Result<()> {
   HttpServer::new(|| { App::new().service(handler) })
